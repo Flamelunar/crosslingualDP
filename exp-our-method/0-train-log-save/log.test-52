@@ -1,0 +1,499 @@
+read config from config.txt
+Loaded config file successfully.
+is_test 1
+is_train 0
+device-x gpu
+device cuda:0
+dict_dir ./
+word_freq_cutoff 1
+model_dir ./
+ext_word_emb_full_path /home/ljj/mydata/giga.bin
+ext_word_dict_full_path /home/ljj/mydata/extwords.txt
+inst_num_max -1
+max_bucket_num 80
+sent_num_one_batch 50
+word_num_one_batch 512
+is_use_lstm 0
+is_shared_lstm 1
+is_use_mamba 1
+is_gate_lstm 0
+is_meta 1
+is_diff_loss 1
+is_meta_weight 1
+is_domain_emb 1
+is_adversary 0
+is_use_kan 1
+is_use_mlp 0
+is_multi 0
+is_charlstm 1
+is_use_multi_head_attention 0
+attention_head_num 8
+model_eval_num 52
+data_dir /home/ljj/mydata/ud-2.13
+train_files /home/ljj/mydata/ud-2.13/src/zh_ud-train.conllu:/home/ljj/mydata/ud-2.13/tgt/vi-train.conllu
+dev_files /home/ljj/mydata/ud-2.13/tgt/vi-dev.conllu
+test_files ./data/ALT_vi_2000.txt
+unlabel_train_files /home/liying/parser/data/ud/unlabal/vi-unlabel-train.txt
+is_dictionary_exist 1
+train_max_eval_num 1000
+save_model_after_eval_num 1
+train_stop_after_eval_num_no_improve 20
+eval_every_update_step_num 112
+mamba_layer_num 1
+lstm_layer_num 3
+word_emb_dim 100
+tag_emb_dim 100
+domain_emb_dim 8
+domain_size 2
+emb_dropout_ratio 0.33
+lstm_hidden_dim 400
+lstm_input_dropout_ratio 0.33
+lstm_hidden_dropout_ratio_for_next_timestamp 0.33
+mamba_dropout_ratio 0
+subword_dropout 0.0
+dropout_1 0.33
+mlp_output_dim_arc 500
+mlp_output_dim_rel 100
+mlp_input_dropout_ratio 0.33
+mlp_output_dropout_ratio 0.33
+kan_input_dropout_ratio 0.33
+kan_output_dropout_ratio 0.33
+learning_rate 1e-4
+meta_learning_rate 1e-4
+meta_loss 1
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .98
+epsilon 1e-12
+clip 5.0
+adversary_lambda_loss 0.1
+diff_bate_loss 0.48
+weight_decay 0
+random_seeds =  [1736132750, 195623675, 700417504, 984895014]
+Loading dict words done: 8844 keys; unknown-id=1
+Loading dict chars done: 2821 keys; unknown-id=1
+Loading dict postags done: 19 keys; unknown-id=1
+Loading dict labels done: 87 keys; unknown-id=-1
+Loading dict ext_words done: 372849 keys; unknown-id=1
+self._file_name_short ._data_ALT_vi_2000.txt
+self._domain_id 2
+Reading ._data_ALT_vi_2000.txt done: 2000 instances
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  0 68 13 2 0
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  1 115 15 3 2
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  2 128 17 4 5
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  3 76 18 3 9
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  4 70 19 3 12
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  5 85 20 3 15
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  6 103 21 4 18
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  7 80 22 3 22
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  8 91 23 4 25
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  9 81 24 4 29
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  10 89 25 4 33
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  11 100 26 5 37
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  12 64 27 3 42
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  13 66 28 4 45
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  14 56 29 3 49
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  15 52 30 3 52
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  16 59 31 4 55
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  17 48 32 3 59
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  18 58 33 4 62
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  19 39 34 3 66
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  20 40 35 3 69
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  21 45 36 3 72
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  22 35 37 3 75
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  23 65 39 5 78
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  24 58 41 5 83
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  25 40 43 3 88
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  26 34 45 3 91
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  27 32 48 3 94
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  28 42 51 4 97
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  29 28 55 3 101
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  30 25 61 3 104
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  31 18 69 2 107
+i, inst_num, max_len, batch_num_to_provide, batch_num_total =  32 10 86 2 109
+._data_ALT_vi_2000.txt can provide 111 batches in total with 33 buckets
+numeralizing [and pad if use-bucket] all instances in all datasets
+init models
+100 768
+Orthogonal pretrainer loss: 4.97e-27
+Some weights of the model checkpoint at /home/ljj/xlm-roberta-base/ were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2821
+800 200
+Orthogonal pretrainer loss: 5.05e+08
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 600
+Orthogonal pretrainer loss: 5.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1600 1200
+Orthogonal pretrainer loss: 2.00e+02
+1 is running
+Load model ./models-52/ done.
+._data_ALT_vi_2000.txt
+parser loss: tensor(0.5168, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0368, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0072, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.3943, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0431, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0074, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5725, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0530, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0079, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6879, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0473, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0079, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.4971, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0439, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0077, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6490, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0563, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0085, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5490, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0614, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0083, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5999, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0623, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0081, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5775, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0624, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0080, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5871, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0697, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0086, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5695, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0666, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0086, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5029, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0673, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0089, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6412, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0722, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0088, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5606, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0635, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0088, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5146, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0757, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0091, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5402, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0716, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0090, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5776, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0741, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0091, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5796, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0799, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0091, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5817, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0650, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0089, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6749, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0719, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0090, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5517, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0804, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0094, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5739, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0738, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0093, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6988, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0840, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0096, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5916, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0761, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0097, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6231, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0709, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0096, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6410, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0797, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0095, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6442, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0845, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0094, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7042, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0808, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0102, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5677, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0870, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0095, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6579, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0868, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0104, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6153, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0816, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0097, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7046, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0913, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0101, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6250, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0910, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0104, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6173, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0925, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0098, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6552, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0842, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0100, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6618, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0898, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0100, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5911, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0812, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0098, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7830, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0905, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0100, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6620, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0797, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0101, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7670, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0789, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0101, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6183, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0870, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0105, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7759, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0929, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0097, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7288, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0910, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0103, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7416, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0786, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0099, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8294, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0897, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0100, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7477, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1011, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0105, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6299, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0885, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0100, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7900, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0865, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0106, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6061, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0994, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0104, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7534, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0884, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0103, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.5836, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0877, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0106, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7217, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0990, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0106, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7086, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0976, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0107, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7354, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0917, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0109, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7210, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0958, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0107, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8088, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0934, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0105, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9059, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0987, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0111, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7410, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0962, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0105, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8818, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0986, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0107, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7374, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.0971, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0109, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.6875, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1008, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0108, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8542, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1042, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0112, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7177, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1035, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0112, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7992, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1062, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0117, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7746, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1144, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0109, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9053, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1213, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0115, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7458, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1195, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0113, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8829, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1112, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0115, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8928, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1050, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0111, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8076, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1142, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0112, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7717, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1154, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0116, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7859, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1113, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0114, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7825, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1058, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0118, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7642, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1079, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0117, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8330, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1251, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0115, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7272, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1184, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0119, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7702, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1150, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0119, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8633, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1025, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0121, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8687, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1250, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0116, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8655, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1226, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0120, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7510, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1200, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0116, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8116, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1086, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0114, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9295, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1198, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0122, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7389, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1314, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0126, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8296, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1104, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0120, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7852, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1260, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0122, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.0245, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1323, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0126, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.7114, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1203, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0115, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9340, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1280, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0126, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9575, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1251, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0128, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8441, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1330, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0121, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8791, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1435, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0131, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8456, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1272, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0124, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8100, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1443, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0127, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9066, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1451, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0128, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8522, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1410, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0126, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.0257, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1370, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0123, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9595, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1433, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0129, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.8742, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1361, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0129, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9845, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1388, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0138, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9758, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1377, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0130, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9575, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1512, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0133, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(0.9770, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1507, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0132, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.1030, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1469, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0125, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.2108, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1487, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0129, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.0265, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1744, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0129, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.1072, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1532, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0129, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.1248, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1921, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0132, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.1444, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1727, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0139, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.0505, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.2223, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0133, device='cuda:0', grad_fn=<MulBackward0>)
+parser loss: tensor(1.2911, device='cuda:0', grad_fn=<DivBackward0>)
+matching_loss:  tensor(0.1684, device='cuda:0', grad_fn=<AddBackward0>)
+diff_loss tensor(0.0116, device='cuda:0', grad_fn=<MulBackward0>)
+one_batch is none ._data_ALT_vi_2000.txt
+        ._data_ALT_vi_2000.txt(   52): loss=97.242 las=75.278, uas=85.254, 53988 (53988) words, 2000 sentences, time=114.786 [2025-01-06, 11:07:45]
